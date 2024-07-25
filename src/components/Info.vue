@@ -3,13 +3,14 @@
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades!</p>
     <p>Utilizo as seguintes tecnologias para back-end:</p>
-    <ul >
+    <ul>
       <li v-for="technology in backend_technologies">{{ technology }}</li>
     </ul>
     <p>Utilizo as seguintes tecnologias para front-end:</p>
-    <ul >
+    <ul>
       <li v-for="technology in frontend_technologies">
-        {{ technology.language }}</li>
+        {{ technology.language }}
+      </li>
     </ul>
     <div>
       <button @click="showEmail">{{ textoBotao }}</button>
@@ -39,11 +40,11 @@ export default {
       textoBotao: "Mostar email",
       backend_technologies: ["JavaScript", "PHP", "Python"],
       frontend_technologies: [
-        {id: 1, language: "HTML"},
-        {id: 2, language: "CSS"},
-        {id: 3, language: "VUE"},
-    ]
-    }
+        { id: 1, language: "HTML" },
+        { id: 2, language: "CSS" },
+        { id: 3, language: "VUE" },
+      ],
+    };
   },
   methods: {
     showEmail() {
